@@ -7,6 +7,7 @@ An OpenAI Codex skill for shipping WeChat Mini Program projects that use Tencent
 - WeChat Mini Program frontend implementation and debugging
 - Tencent CloudBase setup checks, including `envId`, AppID association, NoSQL collections, permissions, cloud functions, storage, and static hosting
 - Admin backend to mini program data synchronization
+- Guided intake for no-code or incomplete projects
 - WeChat Developer Tools error triage
 - Full customer trial flow from backend product upload to mini program display/order testing
 - Clean source-code packaging for delivery
@@ -29,6 +30,10 @@ Restart Codex or start a new session so the skill metadata is discovered.
 Use prompts like:
 
 ```text
+Use Tencent CloudBase WeChat Mini Program Delivery. I have no code yet. Ask me the required setup questions first, then build the MVP.
+```
+
+```text
 Use Tencent CloudBase WeChat Mini Program Delivery to debug this mini program and admin backend.
 ```
 
@@ -48,10 +53,23 @@ agents/openai.yaml
 references/
   cloudbase-miniprogram-debugging.md
   delivery-checklist.md
+  intake-questionnaire.md
   product-design-qa.md
 scripts/
   package_delivery.sh
 ```
+
+## Guided Intake Mode
+
+For projects with no code or incomplete requirements, the skill asks only the blocking questions first:
+
+- industry and transaction type
+- required MVP features
+- Mini Program AppID and CloudBase `envId` availability
+- customer trial vs source-code delivery
+- brand assets and initial product data
+
+If you want speed, tell Codex to choose defaults. The skill will proceed with an MVP mall flow and list assumptions before implementation.
 
 ## Packaging Script
 

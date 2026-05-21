@@ -1,4 +1,4 @@
 interface:
   display_name: "Tencent CloudBase WeChat Delivery"
   short_description: "Ship WeChat Mini Program and CloudBase projects."
-  default_prompt: "Use the Tencent CloudBase WeChat Mini Program Delivery workflow to implement, debug, test, package, and hand off this project."
+  default_prompt: "Use the Tencent CloudBase WeChat Mini Program Delivery workflow. Ask for missing setup details first, then implement, debug, test, package, and hand off this project."
